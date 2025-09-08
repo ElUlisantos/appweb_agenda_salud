@@ -1,19 +1,21 @@
-
-
 body {
     font-family: 'Roboto', sans-serif;
+
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
 }
 
 /* Estilo para el carrusel para asegurar que las imágenes no se distorsionen */
 .carousel-item img {
     object-fit: cover;
-    height: 400px; /* Altura fija para el carrusel */
+    height: 400px; 
 }
 
 /* Estilos para la sección de servicios */
 .icono-servicio {
-    font-size: 3rem; /* Tamaño grande para los íconos */
-    color: #0d6efd; /* Color primario de Bootstrap */
+    font-size: 3rem; 
+    color: #0d6efd; 
 }
 
 .tarjeta-servicio {
@@ -21,7 +23,7 @@ body {
 }
 
 .tarjeta-servicio:hover {
-    transform: translateY(-10px); /* Efecto de "levantar" la tarjeta */
+    transform: translateY(-10px); 
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
 }
 
@@ -30,12 +32,12 @@ body {
     border: 1px solid #e9ecef;
 }
 
-/* --- Nuevos Estilos para la Página de Citas --- */
+/* --- Estilos para la Página de Citas --- */
 
 /* Contenedor para los filtros y botón de exportar */
 .panel-filtros {
-    background-color: #f8f9fa; /* Color de fondo suave */
-    border: 1px solid #dee2e6; /* Borde sutil */
+    background-color: #f8f9fa; 
+    border: 1px solid #dee2e6; 
     margin-bottom: 2rem;
 }
 
@@ -43,5 +45,30 @@ body {
 .acciones-tabla {
     display: flex;
     justify-content: center;
-    gap: 0.5rem; /* Espacio entre los botones */
+    gap: 0.5rem; 
+}
+
+/* --- Estilo para mejorar la legibilidad del texto en el carrusel --- */
+
+/* --- Efecto hover para los enlaces de la barra de navegación --- */
+
+.navbar-nav .nav-link {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 0.25rem; /* Bordes redondeados */
+    margin: 0 0.25rem; /* Pequeño espacio entre enlaces */
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.15); /* Color de fondo semitransparente al pasar el cursor */
+    color: #fff; /* Asegura que el texto siga siendo blanco */
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    border-radius: .5rem; /* Bordes redondeados */
+    padding: 1rem;
+}
+
+main {
+    flex-grow: 1; 
 }
