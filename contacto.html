@@ -3,28 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" href="css/bootstrap.min.css">    
-    <link rel="stylesheet" href="css/estilos.css">
-    <title>SaludAgenda - Contacto</title>
+    <title>Contacto - SaludAgenda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet">
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-heart-pulse-fill" viewBox="0 0 16 16" style="vertical-align: text-bottom;">
-                    <path d="M1.475 9C2.702 10.84 4.779 12.871 8 15c3.221-2.129 5.298-4.16 6.525-6H12a.5.5 0 0 1-.464-.314l-1.457-3.642-1.598 5.593a.5.5 0 0 1-.945.049L5.889 6.568l-1.473 2.21A.5.5 0 0 1 4 9z"/>
-                    <path d="M.88 8C-2.427 1.68 4.41-2 7.823 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C11.59-2 18.426 1.68 15.12 8h-2.783l-1.874-4.686a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8z"/>
-                </svg>
-                SaludAgenda
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-heartbeat me-2"></i>SaludAgenda
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="nav">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Inicio</a>
@@ -33,95 +26,128 @@
                         <a class="nav-link" href="registro.html">Agendar Cita</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="citas.html">Listado de Citas</a>
+                        <a class="nav-link" href="citas.html">Mis Citas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+                        <a class="nav-link active" href="contacto.html">Contacto</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <main class="container my-5">
-        <div class="text-center mb-5">
-            <h2 class="display-6">Ponte en Contacto con Nosotros</h2>
-            <p class="lead">¿Tienes alguna duda o consulta? ¡Escríbenos!</p>
-        </div>
-
+    <div class="container mt-5">
         <div class="row">
-            <div class="col-lg-5 mb-4 mb-lg-0">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h4 class="card-title mb-4">Información de la Clínica</h4>
-                        <div class="d-flex align-items-center mb-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-geo-alt-fill text-primary me-3" viewBox="0 0 16 16">
-                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
-                            </svg>
-                            <div>
-                                <strong>Dirección:</strong><br>
-                                104-B, Avenida San Claudio, Blvrd 14 Sur, Cdad. Universitaria, 72592 Heroica Puebla de Zaragoza, Pue.
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center mb-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-telephone-fill text-primary me-3" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.28 1.465l-2.135 2.134a11.2 11.2 0 0 0 6.362 6.362l2.134-2.135a1.745 1.745 0 0 1 1.466-.28l2.292 1.146a1.745 1.745 0 0 1 .163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
-                            </svg>
-                             <div>
-                                <strong>Teléfono:</strong><br>
-                                +522222295500
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-envelope-fill text-primary me-3" viewBox="0 0 16 16">
-                                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
-                            </svg>
-                            <div>
-                                <strong>Correo Electrónico:</strong><br>
-                                contacto@saludagenda.com
-                            </div>
-                        </div>
+            <div class="col-md-8">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0"><i class="fas fa-envelope me-2"></i>Contáctanos</h3>
                     </div>
-                </div>
-            </div>
-
-            <div class="col-lg-7">
-                <div class="card">
-                    <div class="card-body p-4">
-                        <form id="formulario-contacto" novalidate>
+                    <div class="card-body">
+                        <div id="alertContacto"></div>
+                        <form id="formContacto">
                             <div class="mb-3">
-                                <label for="nombre-contacto" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="nombre-contacto" placeholder="Tu nombre completo" required>
+                                <label for="nombreContacto" class="form-label">Nombre Completo *</label>
+                                <input type="text" class="form-control" id="nombreContacto" required>
+                                <div class="invalid-feedback">
+                                    El nombre es obligatorio.
+                                </div>
                             </div>
                             <div class="mb-3">
-                                <label for="correo-contacto" class="form-label">Correo Electrónico</label>
-                                <input type="email" class="form-control" id="correo-contacto" placeholder="Tu dirección de correo" required>
+                                <label for="emailContacto" class="form-label">Correo Electrónico *</label>
+                                <input type="email" class="form-control" id="emailContacto" required>
+                                <div class="invalid-feedback">
+                                    Ingrese un correo electrónico válido.
+                                </div>
                             </div>
                             <div class="mb-3">
-                                <label for="mensaje-contacto" class="form-label">Mensaje</label>
-                                <textarea class="form-control" id="mensaje-contacto" rows="5" placeholder="Escribe aquí tu mensaje..." required></textarea>
+                                <label for="mensaje" class="form-label">Mensaje *</label>
+                                <textarea class="form-control" id="mensaje" rows="5" required maxlength="500"></textarea>
+                                <div class="invalid-feedback">
+                                    El mensaje es obligatorio.
+                                </div>
+                                <div class="form-text">Máximo 500 caracteres</div>
                             </div>
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-primary btn-lg">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16" style="vertical-align: text-bottom; margin-right: 8px;">
-                                        <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z"/>
-                                    </svg>
-                                    Enviar Mensaje
+                                    <i class="fas fa-paper-plane me-2"></i>Enviar Mensaje
                                 </button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <div class="card-header bg-secondary text-white">
+                        <h5 class="mb-0">Información de Contacto</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                            <strong>Dirección:</strong><br>
+                            104-B, Avenida San Claudio, Blvrd 14 Sur, Cdad. Universitaria, 72592 Heroica Puebla de Zaragoza, Pue.
+                        </div>
+                        <div class="mb-3">
+                            <i class="fas fa-phone text-primary me-2"></i>
+                            <strong>Teléfono:</strong><br>
+                            +522222295500
+                        </div>
+                        <div class="mb-3">
+                            <i class="fas fa-envelope text-primary me-2"></i>
+                            <strong>Email:</strong><br>
+                            contacto@saludagenda.com
+                        </div>
+                        <div class="mb-3">
+                            <i class="fas fa-clock text-primary me-2"></i>
+                            <strong>Horarios:</strong><br>
+                            Lun - Vie: 8:00 AM - 6:00 PM<br>
+                            Sáb: 8:00 AM - 2:00 PM<br>
+                            Dom: Cerrado
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </main>
+    </div>
 
-    <footer class="bg-dark text-white text-center p-3 mt-5">
-        <div class="container">
-            <p>&copy; 2025 SaludAgenda. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('formContacto').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const nombre = document.getElementById('nombreContacto').value.trim();
+            const email = document.getElementById('emailContacto').value.trim();
+            const mensaje = document.getElementById('mensaje').value.trim();
+            
+            // Validar campos
+            if (!nombre || !email || !mensaje) {
+                mostrarAlerta('Todos los campos son obligatorios.', 'danger');
+                return;
+            }
+            
+            // Validar email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                mostrarAlerta('Ingrese un correo electrónico válido.', 'danger');
+                return;
+            }
+            
+            // Simular envío exitoso
+            mostrarAlerta('¡Mensaje enviado exitosamente! Nos pondremos en contacto contigo pronto.', 'success');
+            form.reset();
+        });
+        
+        function mostrarAlerta(mensaje, tipo) {
+            const alertContainer = document.getElementById('alertContacto');
+            alertContainer.innerHTML = `
+                <div class="alert alert-${tipo} alert-dismissible fade show" role="alert">
+                    ${mensaje}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            `;
+        }
+    </script>
 </body>
 </html>

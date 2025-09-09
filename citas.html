@@ -3,28 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" href="css/bootstrap.min.css">    
-    <link rel="stylesheet" href="css/estilos.css">
-    <title>SaludAgenda - Citas</title>    
+    <title>Mis Citas - SaludAgenda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet">
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-heart-pulse-fill" viewBox="0 0 16 16" style="vertical-align: text-bottom;">
-                    <path d="M1.475 9C2.702 10.84 4.779 12.871 8 15c3.221-2.129 5.298-4.16 6.525-6H12a.5.5 0 0 1-.464-.314l-1.457-3.642-1.598 5.593a.5.5 0 0 1-.945.049L5.889 6.568l-1.473 2.21A.5.5 0 0 1 4 9z"/>
-                    <path d="M.88 8C-2.427 1.68 4.41-2 7.823 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C11.59-2 18.426 1.68 15.12 8h-2.783l-1.874-4.686a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8z"/>
-                </svg>
-                SaludAgenda
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-heartbeat me-2"></i>SaludAgenda
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="nav">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Inicio</a>
@@ -33,7 +26,7 @@
                         <a class="nav-link" href="registro.html">Agendar Cita</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="citas.html">Listado de Citas</a>
+                        <a class="nav-link active" href="citas.html">Mis Citas</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contacto.html">Contacto</a>
@@ -43,72 +36,131 @@
         </div>
     </nav>
 
-    <main class="container my-5">
-        <div class="text-center mb-5">
-            <h2 class="display-6">Listado de Citas Programadas</h2>
-            <p class="lead">Administra las citas de los pacientes.</p>
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2><i class="fas fa-calendar-alt me-2"></i>Listado de Citas</h2>
+            <button class="btn btn-success" onclick="exportarCitas()">
+                <i class="fas fa-download me-2"></i>Exportar a TXT
+            </button>
         </div>
 
-        <div class="card panel-filtros">
+        <!-- Filtros -->
+        <div class="card mb-4">
             <div class="card-body">
-                <div class="row g-3 align-items-center">
+                <h5>Filtros</h5>
+                <div class="row">
                     <div class="col-md-4">
-                        <label for="filtro-especialidad" class="form-label">Filtrar por Especialidad</label>
-                        <select class="form-select" id="filtro-especialidad">
-                            <option selected>Todas</option>
-                            <option value="pediatria">Pediatría</option>
-                            <option value="ginecologia">Ginecología</option>
-                            <option value="odontologia">Odontología</option>
-                            <option value="medicina-general">Medicina General</option>
+                        <label for="filtroEspecialidad" class="form-label">Especialidad</label>
+                        <select class="form-select" id="filtroEspecialidad" onchange="aplicarFiltros()">
+                            <option value="">Todas las especialidades</option>
+                            <option value="Medicina General">Medicina General</option>
+                            <option value="Pediatría">Pediatría</option>
+                            <option value="Ginecología">Ginecología</option>
+                            <option value="Odontología">Odontología</option>
+                            <option value="Cardiología">Cardiología</option>
+                            <option value="Oftalmología">Oftalmología</option>
                         </select>
                     </div>
-                    <div class="col-md-5">
-                        <label class="form-label">Filtrar por Fecha</label>
-                        <div class="input-group">
-                            <input type="date" class="form-control" id="fecha-inicio">
-                            <span class="input-group-text">a</span>
-                            <input type="date" class="form-control" id="fecha-fin">
-                        </div>
+                    <div class="col-md-3">
+                        <label for="fechaDesde" class="form-label">Fecha Desde</label>
+                        <input type="date" class="form-control" id="fechaDesde" onchange="aplicarFiltros()">
                     </div>
-                    <div class="col-md-3 d-flex align-items-end">
-                        <button class="btn btn-outline-dark w-100" id="btn-exportar">
-                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-down" viewBox="0 0 16 16" style="vertical-align: text-bottom; margin-right: 5px;">
-                                <path fill-rule="evenodd" d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1z"/>
-                                <path fill-rule="evenodd" d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708z"/>
-                            </svg>
-                            Exportar
+                    <div class="col-md-3">
+                        <label for="fechaHasta" class="form-label">Fecha Hasta</label>
+                        <input type="date" class="form-control" id="fechaHasta" onchange="aplicarFiltros()">
+                    </div>
+                    <div class="col-md-2 d-flex align-items-end">
+                        <button class="btn btn-outline-secondary w-100" onclick="limpiarFiltros()">
+                            <i class="fas fa-times me-1"></i>Limpiar
                         </button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="table-responsive">
-            <table class="table table-striped table-hover align-middle">
-                <thead class="table-dark">
-                    <tr>
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Especialidad</th>
-                        <th>Fecha</th>
-                        <th>Hora</th>
-                        <th>Estado</th>
-                        <th class="text-center">Acciones</th>
-                    </tr>
-                </thead>
-                <tbody id="tabla-citas">
-                    </tbody>
-            </table>
+        <!-- Tabla de citas -->
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Especialidad</th>
+                                <th>Fecha</th>
+                                <th>Hora</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaCitas">
+                            <tr>
+                                <td colspan="7" class="text-center text-muted">No hay citas registradas</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-    </main>
+    </div>
 
-    <footer class="bg-dark text-white text-center p-3 mt-5">
-        <div class="container">
-            <p>&copy; 2025 SaludAgenda. Todos los derechos reservados.</p>
+    <!-- Modal Editar Cita -->
+    <div class="modal fade" id="modalEditar" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Editar Cita</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formEditar">
+                        <input type="hidden" id="editarId">
+                        <div class="mb-3">
+                            <label for="editarNombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="editarNombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editarEspecialidad" class="form-label">Especialidad</label>
+                            <select class="form-select" id="editarEspecialidad" required>
+                                <option value="Medicina General">Medicina General</option>
+                                <option value="Pediatría">Pediatría</option>
+                                <option value="Ginecología">Ginecología</option>
+                                <option value="Odontología">Odontología</option>
+                                <option value="Cardiología">Cardiología</option>
+                                <option value="Oftalmología">Oftalmología</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="editarFecha" class="form-label">Fecha</label>
+                                <input type="date" class="form-control" id="editarFecha" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="editarHora" class="form-label">Hora</label>
+                                <select class="form-select" id="editarHora" required>
+                                    <option value="08:00">08:00 AM</option>
+                                    <option value="09:00">09:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="14:00">02:00 PM</option>
+                                    <option value="15:00">03:00 PM</option>
+                                    <option value="16:00">04:00 PM</option>
+                                    <option value="17:00">05:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="guardarEdicion()">Guardar Cambios</button>
+                </div>
+            </div>
         </div>
-    </footer>
+    </div>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/citas.js"></script>
 </body>
 </html>

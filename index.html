@@ -1,39 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" href="css/bootstrap.min.css">    
-    <link rel="stylesheet" href="css/estilos.css">
-    <title>SaludAgenda - Inicio</title>    
+    <title>SaludAgenda - Clínica Médica</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet">
 </head>
-<body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-heart-pulse-fill" viewBox="0 0 16 16" style="vertical-align: text-bottom;">
-                    <path d="M1.475 9C2.702 10.84 4.779 12.871 8 15c3.221-2.129 5.298-4.16 6.525-6H12a.5.5 0 0 1-.464-.314l-1.457-3.642-1.598 5.593a.5.5 0 0 1-.945.049L5.889 6.568l-1.473 2.21A.5.5 0 0 1 4 9z"/>
-                    <path d="M.88 8C-2.427 1.68 4.41-2 7.823 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C11.59-2 18.426 1.68 15.12 8h-2.783l-1.874-4.686a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8z"/>
-                </svg>
-                SaludAgenda
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-heartbeat me-2"></i>SaludAgenda
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="nav">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link active" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="registro.html">Agendar Cita</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="citas.html">Listado de Citas</a>
+                        <a class="nav-link" href="citas.html">Mis Citas</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contacto.html">Contacto</a>
@@ -42,106 +37,109 @@
             </div>
         </div>
     </nav>
+<section>
 
-    <header id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/medicos_carrusel.png" class="d-block w-100" alt="Médico profesional">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Cuidamos de tu Salud</h5>
-                    <p>Profesionales comprometidos con tu bienestar.</p>
-                </div>
+                <img class="d-block w-100" src="/appweb_agenda_salud/img/especialidades_carrusel.png" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img src="img/instalaciones_carrusel.png" class="d-block w-100" alt="Instalaciones de la clínica">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Instalaciones de Primera</h5>
-                    <p>Equipamiento moderno para un diagnóstico preciso.</p>
-                </div>
+                <img class="d-block w-100" src="/appweb_agenda_salud/img/instalaciones_carrusel.png" alt="Second slide" style="height:600px; object-fit:cover;">
             </div>
             <div class="carousel-item">
-                <img src="img/especialidades_carrusel.png" class="d-block w-100" alt="Especialidades médicas">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Todas las Especialidades</h5>
-                    <p>Encuentra al especialista que necesitas.</p>
-                </div>
+                <img class="d-block w-100" src="/appweb_agenda_salud/img/medicos_carrusel.png" alt="Third slide" style="height:600px; object-fit:cover;">
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-    </header>
-
-    <main class="container my-5">
-        <section id="servicios" class="text-center">
-            <h2 class="mb-4">Nuestros Servicios Médicos</h2>
-            <p class="lead mb-5">Ofrecemos una amplia gama de especialidades para cubrir todas tus necesidades de salud.</p>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm tarjeta-servicio">
-                        <div class="card-body">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-standing-dress icono-servicio" viewBox="0 0 16 16">
-                                <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m-.5 12.25V12h1v3.25a.75.75 0 0 0 1.5 0V12h1l-1-5v-.215a.285.285 0 0 1 .56-.078l.793 2.777a.711.711 0 1 0 1.364-.405l-1.065-3.461A3 3 0 0 0 8.784 3.5H7.216a3 3 0 0 0-2.868 2.118L3.283 9.079a.711.711 0 1 0 1.365.405l.793-2.777a.285.285 0 0 1 .56.078V7l-1 5h1v3.25a.75.75 0 0 0 1.5 0Z"/>
-                            </svg>
-                            <h5 class="card-title mt-3">Ginecología</h5>
-                            <p class="card-text">Atención integral para la salud de la mujer en todas las etapas de su vida.</p>
+    </div>
+</section>
+    
+    <!-- Servicios Médicos -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Nuestros Servicios Médicos</h2>
+                <p class="lead text-muted">Atención integral para toda la familia</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-baby fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Pediatría</h5>
+                            <p class="card-text">Atención especializada para niños y adolescentes con médicos pediatras
+                                certificados.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm tarjeta-servicio">
-                        <div class="card-body">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lungs-fill icono-servicio" viewBox="0 0 16 16">
-                                <path d="M8 1a.5.5 0 0 1 .5.5v5.243L9 7.1V4.72C9 3.77 9.77 3 10.72 3c.524 0 1.023.27 1.443.592.431.332.847.773 1.216 1.229.736.908 1.347 1.946 1.58 2.48.176.405.393 1.16.556 2.011.165.857.283 1.857.24 2.759-.04.867-.232 1.79-.837 2.33-.67.6-1.622.556-2.741-.004l-1.795-.897A2.5 2.5 0 0 1 9 11.264V8.329l-1-.715-1 .715V7.214c-.1 0-.202.03-.29.093l-2.5 1.786a.5.5 0 1 0 .58.814L7 8.329v2.935A2.5 2.5 0 0 1 5.618 13.5l-1.795.897c-1.12.56-2.07.603-2.741.004-.605-.54-.798-1.463-.838-2.33-.042-.902.076-1.902.24-2.759.164-.852.38-1.606.558-2.012.232-.533.843-1.571 1.579-2.479.37-.456.785-.897 1.216-1.229C4.257 3.27 4.756 3 5.28 3 6.23 3 7 3.77 7 4.72V7.1l.5-.357V1.5A.5.5 0 0 1 8 1m3.21 8.907a.5.5 0 1 0 .58-.814l-2.5-1.786A.5.5 0 0 0 9 7.214V8.33z"/>
-                            </svg>
-                            <h5 class="card-title mt-3">Pediatría</h5>
-                            <p class="card-text">Cuidado especializado para los más pequeños, desde el nacimiento hasta la adolescencia.</p>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-female fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Ginecología</h5>
+                            <p class="card-text">Cuidado integral de la salud femenina con especialistas en ginecología
+                                y obstetricia.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm tarjeta-servicio">
-                        <div class="card-body">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-pulse icono-servicio" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M10 1.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-5 0A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5v1A1.5 1.5 0 0 1 9.5 4h-3A1.5 1.5 0 0 1 5 2.5zm-2 0h1v1H3a1 1 0 0 0-1 1V14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V3.5a1 1 0 0 0-1-1h-1v-1h1a2 2 0 0 1 2 2V14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3.5a2 2 0 0 1 2-2m6.979 3.856a.5.5 0 0 0-.968.04L7.92 10.49l-.94-3.135a.5.5 0 0 0-.895-.133L4.232 10H3.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 .416-.223l1.41-2.115 1.195 3.982a.5.5 0 0 0 .968-.04L9.58 7.51l.94 3.135A.5.5 0 0 0 11 11h1.5a.5.5 0 0 0 0-1h-1.128z"/>
-                            </svg>
-                            <h5 class="card-title mt-3">Odontología</h5>
-                            <p class="card-text">Soluciones completas para tu salud bucal, desde limpiezas hasta tratamientos complejos.</p>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-tooth fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Odontología</h5>
+                            <p class="card-text">Servicios dentales completos para mantener tu sonrisa saludable y
+                                hermosa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-heart fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Cardiología</h5>
+                            <p class="card-text">Especialistas en salud cardiovascular para el cuidado de tu corazón.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-user-md fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Medicina General</h5>
+                            <p class="card-text">Atención médica integral para toda la familia con médicos generales.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-eye fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Oftalmología</h5>
+                            <p class="card-text">Cuidado especializado de la salud visual y tratamiento de enfermedades
+                                oculares.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section id="cta" class="text-center bg-light p-5 rounded mt-5">
-            <h3 class="mb-3">¿Listo para cuidar tu salud?</h3>
-            <p>Agenda tu cita de forma rápida y sencilla con nuestro sistema en línea.</p>
-            <a href="registro.html" class="btn btn-success btn-lg">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16" style="vertical-align: middle; margin-right: 8px;">
-                    <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
-                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
-                </svg>
-                Agendar Cita Ahora
-            </a>
-        </section>
-    </main>
-
-    <footer class="bg-dark text-white text-center p-3 mt-5">
-        <div class="container">
-            <p>&copy; 2025 SaludAgenda. Todos los derechos reservados.</p>
+            <div class="text-center mt-5">
+                <a href="registro.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-calendar-plus me-2"></i>Agendar Cita
+                </a>
+            </div>
         </div>
-    </footer>
+    </section>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
